@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentCode": {
+            "value": "d01"
+        },
+        "appServicePlanSkuName": {
+            "value": "B1"
+        },
+        "sharedKeyVaultName": {
+            "value": "mshowto-kv"
+        },
+        "sharedKeyVaultResourceGroup": {
+            "value": "mshowto-rg"
+        },
+        "issuerSigningKey": {
+            "value": "@Microsoft.KeyVault(VaultName=mshowto-kv;SecretName=jwtIssuerSigningKey)"
+        },
+        "dbConnectionString": {
+            "value": "@Microsoft.KeyVault(VaultName=mshowto-kv;SecretName=dbConnectionString)"
+        },
+        "userId": {
+            "value": "@Microsoft.KeyVault(VaultName=mshowto-kv;SecretName=userId)"
+        },
+        "password": {
+            "value": "@Microsoft.KeyVault(VaultName=mshowto-kv;SecretName=password)"
+        }
+    }
+}
